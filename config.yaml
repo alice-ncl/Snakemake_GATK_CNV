@@ -1,0 +1,32 @@
+# temp dir for hpc only
+TMPDIR: "/scratch"
+
+########################################################################################################################
+#
+#                                       Genome reference files
+#
+#########################################################################################################################
+# For the best practices short variant discovery geonme, exome and targeted sequencing, use GATK resource bundle which
+# is a collection of standard files working for human genome sequencing using GATK tools. Download the GATK bundle dir for
+# human genome using following link: https://gatk.broadinstitute.org/hc/en-us/articles/360035890811-Resource-bundle
+
+# Gatk bundle dir for b37 genome version, change the location for dir according to path of home directory
+#BUNDLE_DIR: "path/to/GATK_Bundle/b37"
+# Reference sequence (fasta), along with fai and dict files
+
+#Reference genome b37+decoy
+REF: "path/to/GATK_bundle/b37/human_g1k_v37_decoy.fasta"
+REF_DICT: "/nobackup/nai8/GATK_bundle/b37/human_g1k_v37_decoy.dict"
+
+# Intervals file for exome sequencing
+INTERVALS: "path/to/intervals_list.interval_list"
+
+# Sample list for PON
+SAMPLE_LIST: "path/to/PON_SL.tsv"
+
+#SNPs
+COMMON_SNPS: "path/to/GATK_bundle/b37/af-only-gnomad.raw.sites.b37.common.vcf"
+#small_exac_common_3_b37.vcf"
+
+#Sample Name prefix
+PREFIX: "LYM4"
